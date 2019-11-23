@@ -13,7 +13,7 @@ The package can be installed as:
 ```elixir
 def deps do
   # Get from hex
-  [{:bamboo_postmark, "~> 0.4"}]
+  [{:bamboo_postmark, "~> 0.6"}]
   # Or use the latest from master
   [{:bamboo_postmark, github: "pablo-co/bamboo_postmark"}]
 end
@@ -39,6 +39,8 @@ end
 config :my_app, MyApp.Mailer,
       adapter: Bamboo.PostmarkAdapter,
       api_key: "my_api_key"
+      # Or if you want to use an ENV variable:
+      # api_key: {:system, "POSTMARK_API_KEY"}
 ```
 
 4. Follow Bamboo [Getting Started Guide](https://github.com/thoughtbot/bamboo#getting-started)
@@ -124,3 +126,7 @@ config :my_app, MyApp.Mailer,
       api_key: "my_api_key",
       request_options: [recv_timeout: 10_000]
 ```
+
+## JSON support
+
+Bamboo comes with JSON support out of the box, see [Bamboo JSON support](https://github.com/thoughtbot/bamboo#json-support).

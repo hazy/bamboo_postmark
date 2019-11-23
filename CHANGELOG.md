@@ -1,3 +1,19 @@
+## 0.6.0
+
+### New Additions
+
+* Allow configuring API key with {:system, "ENVVAR"} ([#26])
+
+[#26]: https://github.com/pablo-co/bamboo_postmark/pull/26
+
+## 0.5.0
+
+### New Additions
+
+* Make JSON library configurable ([#22])
+
+[#22]: https://github.com/pablo-co/bamboo_postmark/pull/22
+
 ## 0.4.2
 
 ### Fixes/Enhancements

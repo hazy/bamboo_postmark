@@ -5,7 +5,7 @@ defmodule BambooPostmark.Mixfile do
 
   def project do
     [app: :bamboo_postmark,
-     version: "0.4.2",
+     version: "0.6.0",
      elixir: "~> 1.2",
      source_url: @project_url,
      homepage_url: @project_url,
@@ -22,12 +22,12 @@ defmodule BambooPostmark.Mixfile do
   end
 
   defp deps do
-    [{:bamboo, ">= 0.7.0"},
+    [{:bamboo, ">= 1.2.0"},
      {:hackney, ">= 1.6.5"},
-     {:poison, ">= 1.5.0"},
+     {:poison, ">= 1.5.0", only: :test},
      {:plug, "~> 1.0"},
-     {:cowboy, "~> 1.0", only: [:test, :dev]},
-     {:ex_doc, "~> 0.13", only: :dev}]
+     {:plug_cowboy, "~> 1.0", only: [:test, :dev]},
+     {:ex_doc, "~> 0.19", only: :dev}]
   end
 
   defp package do
