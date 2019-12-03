@@ -143,8 +143,7 @@ defmodule Bamboo.PostmarkAdapter do
                          "Subject": email.subject,
                          "TextBody": email.text_body,
                          "HtmlBody": email.html_body,
-                         "Headers": email_headers(email),
-                         "TrackOpens": true
+                         "Headers": email_headers(email)
                        }, email)
   end
 
